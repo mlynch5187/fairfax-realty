@@ -7,4 +7,13 @@ RSpec.describe "welcome index page", type: :feature do
 
     expect(page).to have_content("Lucie Lynch")
   end
+
+  it "has links to each section" do
+
+    visit "/"
+
+    expect(page).to have_link("Testimonials")
+    expect(page).to have_link("Listings")
+    expect(page).to have_link("Book A Free Consultation")
+  end
 end
