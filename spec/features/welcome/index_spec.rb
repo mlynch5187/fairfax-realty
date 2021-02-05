@@ -8,6 +8,13 @@ RSpec.describe "welcome index page", type: :feature do
     expect(page).to have_content("Lucie Lynch")
   end
 
+  it "has the realtor headshot" do
+
+    visit "/"
+
+    expect(page).to have_css("img[src*='lucie_realtor.jpg']")
+  end
+
   it "has links to each section" do
 
     visit "/"
