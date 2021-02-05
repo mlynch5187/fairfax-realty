@@ -19,7 +19,7 @@ easily book consultations, and view the realtor's current and former listings.
 
 ### Original Wireframe
 
-[![Header](https://raw.githubusercontent.com/mlynch5187/fairfax-realty/main/original_wireframe.png "Original Wireframe")
+[![Header](https://raw.githubusercontent.com/mlynch5187/fairfax-realty/main/app/assets/images/original_wireframe.png "Original Wireframe")
 
 ### Dependencies Used
 
