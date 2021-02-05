@@ -92,7 +92,7 @@ ul.social-buttons {
 ul.social-buttons li a:active,
 ul.social-buttons li a:focus,
 ul.social-buttons li a:hover {
-  background-color: $primary-orange;
+  background-color: white;
 }
 
 ul.social-buttons li a {
@@ -119,6 +119,10 @@ footer .quick-links {
 }
 
 .copyright {
+  color: white;
+}
+
+.list-inline-item {
   color: white;
 }
 
