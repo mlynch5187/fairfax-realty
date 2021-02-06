@@ -23,4 +23,7 @@ easily book consultations, and view the realtor's current and former listings.
 
 ### Dependencies Used
 
-TBD
+### Tools Used
+- Ruby, Rails
+- RSpec for testing
+- Travis CI for continuous integration
