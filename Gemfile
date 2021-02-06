@@ -33,8 +33,13 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap'
 gem 'jquery-rails'
 
+# Access an interactive console on exception pages or by calling 'console' anywhere in the code.
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+
+group :test do
+  gem 'shoulda-matchers', '~> 2.5'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
