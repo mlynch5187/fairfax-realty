@@ -21,14 +21,14 @@ RSpec.describe "listings index page", type: :feature do
 
       visit "/listings"
 
+      expect(page).to have_css("img[src*='#{@maple_street.image}']")
       expect(page).to have_content(@maple_street.address)
       expect(page).to have_content(@maple_street.city)
       expect(page).to have_content(@maple_street.state)
-      expect(page).to have_content(@maple_street.image)
+      expect(page).to have_css("img[src*='#{@shady_grove.image}']")
       expect(page).to have_content(@shady_grove.address)
       expect(page).to have_content(@shady_grove.city)
       expect(page).to have_content(@shady_grove.state)
-      expect(page).to have_content(@shady_grove.image)
     end
   end
 end
