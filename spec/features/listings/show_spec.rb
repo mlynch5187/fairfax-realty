@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "listings index page", type: :feature do
+RSpec.describe "listings show page", type: :feature do
   describe 'As a visitor' do
     before :each do
       @maple_street = Listing.create(address: '9106 Maple Way',
@@ -17,18 +17,19 @@ RSpec.describe "listings index page", type: :feature do
                                     description: "Located near Lake Centennial. The autumn colors are gorgeous!")
     end
 
-    it "shows all listings with links" do
+    it "allows me to view individual listings from the index" do
 
       visit "/listings"
 
+      click_link("#{@maple_street.address}")
+
+      expect(page).to have_current_path("/listings/#{@maple_street.id}")
       expect(page).to have_css("img[src*='#{@maple_street.image}']")
-      expect(page).to have_link(@maple_street.address)
-      expect(page).to have_content(@maple_street.city)
-      expect(page).to have_content(@maple_street.state)
-      expect(page).to have_css("img[src*='#{@shady_grove.image}']")
-      expect(page).to have_link(@shady_grove.address)
-      expect(page).to have_content(@shady_grove.city)
-      expect(page).to have_content(@shady_grove.state)
+      expect(page).to have_content("#{@maple_street.address}")
+      expect(page).to have_content("#{@maple_street.city}")
+      expect(page).to have_content("#{@maple_street.state}")
+      expect(page).to have_content("#{@maple_street.zip}")
+      expect(page).to have_content("#{@maple_street.description}")
     end
   end
 end
