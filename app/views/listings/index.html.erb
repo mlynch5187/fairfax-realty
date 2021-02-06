@@ -1,0 +1,7 @@
+<% @listings.each do |listing| %>
+
+  <%= link_to image_tag("#{listing.image}"), "/listings/#{listing.id}" %>
+  <%= link_to listing.address, "/listings/#{listing.id}" %>
+  <%= listing.city %>
+  <%= listing.state %>
+<% end %>
