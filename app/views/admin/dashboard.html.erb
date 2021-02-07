@@ -1,0 +1,5 @@
+<h1>Dashboard</h1>
+  <% @listings.each do |listing|%>
+    <p><%=link_to "New Listing", "/admin/listings/new"%></p>
+    <p><%="#{listing.address}"%> <%=link_to "Edit Listing", "/admin/listings/#{listing.id}edit"%></p>
+  <% end %>

@@ -29,7 +29,7 @@ RSpec.describe("Admin Merchants Index Page") do
       click_button "Login"
 
       expect(current_path).to eq("/admin/dashboard")
-      expect(page).to have_content("You have logged in")
+      expect(page).to have_content("Dashboard")
       expect(page).to have_content("9106 Maple Way")
       expect(page).to have_content("3167 Shady Grove")
       expect(page).to have_link("New Listing")
