@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/listings/:listing_id', to:'listings#show'
 
   namespace :admin do
+    get "/dashboard", to: 'dashboard#index'
     post "/dashboard", to: 'dashboard#index'
   end
 end
