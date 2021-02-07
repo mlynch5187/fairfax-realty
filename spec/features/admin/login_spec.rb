@@ -5,7 +5,7 @@ RSpec.describe("Admin Merchants Index Page") do
     before(:each) do
       @admin = User.create(email: "admin@example.com",
                            password: "123456",
-                           role: 1)
+                           role: 0)
       @maple_street = Listing.create(address: '9106 Maple Way',
                                      city: 'Catonsville',
                                      state: 'MD',
