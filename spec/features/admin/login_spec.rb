@@ -21,7 +21,7 @@ RSpec.describe("Admin Merchants Index Page") do
     end
 
     it "I can login to access the admin dashboard" do
-      visit "/admin/login"
+      visit "/login"
 
       fill_in :email, with: @admin.email
       fill_in :password, with: @admin.password
