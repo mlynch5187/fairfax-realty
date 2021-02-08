@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     get "/dashboard", to: 'dashboard#index'
+    get "listings/new", to: 'listings#new'
     # post "/dashboard", to: 'dashboard#index'
   end
 end
