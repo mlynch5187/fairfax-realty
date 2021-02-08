@@ -20,34 +20,6 @@ RSpec.describe("Admin Login Page") do
                                     description: "Located near Lake Centennial. The autumn colors are gorgeous!")
     end
 
-    it "I can login to access the admin dashboard" do
-      visit "/login"
-
-      fill_in :email, with: @admin.email
-      fill_in :password, with: @admin.password
-
-      click_button "Login"
-
-      expect(current_path).to eq("/admin/dashboard")
-      expect(page).to have_content("Dashboard")
-      expect(page).to have_content("9106 Maple Way")
-      expect(page).to have_content("3167 Shady Grove")
-      expect(page).to have_link("New Listing")
-      expect(page).to have_link("Edit Listing")
-    end
-
-    it "I can't login with invalid credentials" do
-      visit "/login"
-
-      fill_in :email, with: "Wrong"
-      fill_in :password, with: "Login"
-
-      click_button "Login"
-
-      expect(current_path).to eq("/login")
-      expect(page).to have_content("Sorry, your credentials are invalid")
-    end
-
     it "I can successfully logout after logging in" do
       visit "/login"
 
