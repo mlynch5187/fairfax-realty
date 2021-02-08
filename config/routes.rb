@@ -12,6 +12,6 @@ Rails.application.routes.draw do
     get '/dashboard', to: 'dashboard#index'
     post '/dashboard', to: 'dashboard#index'
     get '/listings/new', to: 'listings#new'
-    get '/listings/:listing_id/edit', to: 'listing#edit'
+    get '/listings/:listing_id/edit', to: 'listings#edit'
   end
 end
