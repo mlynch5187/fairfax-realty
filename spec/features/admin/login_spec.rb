@@ -49,7 +49,7 @@ RSpec.describe("Admin Merchants Index Page") do
       click_link "Logout"
 
       expect(current_path).to eq("/")
-      expect(page).to have_content("You have logged out")
+      expect(page).to have_content("Successfully logged out!")
     end
   end
 end

@@ -40,6 +40,10 @@
             </ul>
         </div>
     </nav>
+
+    <% flash.each do |type, message| %>
+      <p><%= message %></p>
+    <% end %>
     <%= yield %>
   </body>
   <div class="footer fixed-bottom">
