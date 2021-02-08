@@ -1,0 +1,7 @@
+<h1>Dashboard</h1>
+  <p><%=link_to "New Listing", "/admin/listings/new"%></p>
+  <% @listings.each do |listing|%>
+    <p><%="#{listing.address} #{listing.city} #{listing.state} #{listing.zip}"%> <%=link_to "Edit Listing", "/admin/listings/#{listing.id}/edit"%></p>
+  <% end %>
+
+<%= link_to "Logout", "/logout" if current_user %>
