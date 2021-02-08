@@ -23,18 +23,16 @@ RSpec.describe 'Admin Listings New Page', type: :feature do
 
       click_button "Create New Listing"
 
-      new_merchant = Listing.last
-
-      require "pry"; binding.pry
+      new_listing = Listing.last      
 
       expect(current_path).to eq('/admin/dashboard')
       expect(page).to have_content("12345 Main Street")
-      expect(new_merchant.address).to eq("12345 Main Street")
-      expect(new_merchant.city).to eq("Baltimore")
-      expect(new_merchant.state).to eq("MD")
-      expect(new_merchant.zip).to eq("21029")
-      expect(new_merchant.description).to eq("A home for everyone")
-      expect(new_merchant.image).to eq("https://wp.zillowstatic.com/streeteasy/2/GettyImages-960885430-afe816.jpg")
+      expect(new_listing.address).to eq("12345 Main Street")
+      expect(new_listing.city).to eq("Baltimore")
+      expect(new_listing.state).to eq("MD")
+      expect(new_listing.zip).to eq("21029")
+      expect(new_listing.description).to eq("A home for everyone")
+      expect(new_listing.image).to eq("https://wp.zillowstatic.com/streeteasy/2/GettyImages-960885430-afe816.jpg")
     end
   end
 end

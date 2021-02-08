@@ -11,6 +11,6 @@ Rails.application.routes.draw do
   namespace :admin do
     get "/dashboard", to: 'dashboard#index'
     post "/dashboard", to: 'dashboard#index'
-    # get "/listings/new", to: 'listings#new'
+    get "/listings/new", to: 'listings#new'
   end
 end

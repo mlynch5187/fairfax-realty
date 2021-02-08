@@ -1,6 +1,4 @@
 class Admin::ListingsController < ApplicationController
 
-  def new
-
-  end
+  def new; end
 end
