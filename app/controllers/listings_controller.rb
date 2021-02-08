@@ -22,7 +22,7 @@ class ListingsController < ApplicationController
     @listing = Listing.find(params[:listing_id])
     @listing.update(listing_params)
     if @listing.save
-      redirect_to "/listings/#{@listing.id}"
+      redirect_to "/admin/dashboard"
     else
       flash[:error] = @listing.errors.full_messages.to_sentence
       render :edit

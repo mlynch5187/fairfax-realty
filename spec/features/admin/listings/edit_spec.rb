@@ -33,7 +33,6 @@ RSpec.describe 'Admin Listings New Page', type: :feature do
 
       new_listing = Listing.last
 
-      save_and_open_page
       expect(current_path).to eq('/admin/dashboard')
       expect(page).to have_content("12345 Main Street")
       expect(new_listing.address).to eq("12345 Main Street")
@@ -43,11 +42,11 @@ RSpec.describe 'Admin Listings New Page', type: :feature do
       expect(new_listing.description).to eq("A home for everyone")
       expect(new_listing.image).to eq("https://wp.zillowstatic.com/streeteasy/2/GettyImages-960885430-afe816.jpg")
 
-      expect(page).to not_have_content("9106 Maple Way")
-      expect(new_listing.address).to not_eq("9106 Maple Way")
-      expect(new_listing.city).to not_eq("Catonsville")
-      expect(new_listing.zip).to not_eq("21228")
-      expect(new_listing.description).to not_eq("A beautiful home!")
+      expect(page).to_not have_content("9106 Maple Way")
+      expect(new_listing.address).to_not eq("9106 Maple Way")
+      expect(new_listing.city).to_not eq("Catonsville")
+      expect(new_listing.zip).to_not eq("21228")
+      expect(new_listing.description).to_not eq("A beautiful home!")
     end
   end
 end
