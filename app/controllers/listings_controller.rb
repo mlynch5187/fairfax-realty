@@ -13,19 +13,19 @@ class ListingsController < ApplicationController
     if listing.save
       redirect_to "/admin/dashboard"
     else
-      flash[:error] = merchant.errors.full_messages.to_sentence
-      render :new
+      redirect_to "/admin/listings/new"
+      flash[:error] = listing.errors.full_messages.to_sentence
     end
   end
 
   def update
-    @listing = Listing.find(params[:listing_id])
-    @listing.update(listing_params)
-    if @listing.save
+    listing = Listing.find(params[:listing_id])
+    listing.update(listing_params)
+    if listing.save
       redirect_to "/admin/dashboard"
     else
-      flash[:error] = @listing.errors.full_messages.to_sentence
-      render :edit
+      redirect_to "/admin/listings/#{listing.id}/edit"
+      flash[:error] = listing.errors.full_messages.to_sentence
     end
   end
 

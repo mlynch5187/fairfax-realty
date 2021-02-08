@@ -2,8 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Admin Listings New Page', type: :feature do
   describe 'As a logged in admin' do
-    it 'I can edit an existing listing' do
-
+    before :each do
       @admin = User.create(email: "admin@example.com",
                            password: "123456",
                            role: 0)
@@ -19,6 +18,9 @@ RSpec.describe 'Admin Listings New Page', type: :feature do
       visit '/admin/dashboard'
 
       expect(page).to have_content("9106 Maple Way")
+    end
+
+    it 'I can edit an existing listing' do
 
       click_link "Edit Listing"
 
@@ -47,6 +49,25 @@ RSpec.describe 'Admin Listings New Page', type: :feature do
       expect(new_listing.city).to_not eq("Catonsville")
       expect(new_listing.zip).to_not eq("21228")
       expect(new_listing.description).to_not eq("A beautiful home!")
+    end
+
+    it 'I must fill out all form fields to submit' do
+
+      click_link "Edit Listing"
+
+      fill_in :address, with: ""
+      fill_in :city, with: ""
+      fill_in :state, with: "MD"
+      fill_in :zip, with: "21029"
+      fill_in :description, with: "A home for everyone"
+      fill_in :image, with: "https://wp.zillowstatic.com/streeteasy/2/GettyImages-960885430-afe816.jpg"
+
+      click_button "Edit Listing"
+
+      new_listing = Listing.last
+
+      expect(current_path).to eq("/admin/listings/#{new_listing.id}/edit")
+      expect(page).to have_content("Address can't be blank and City can't be blank")
     end
   end
 end
