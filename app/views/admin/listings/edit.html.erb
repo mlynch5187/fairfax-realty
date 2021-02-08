@@ -1,4 +1,4 @@
-<h1>Edit <%= @listing.address %></h1>
+<h1>Edit Listing</h1>
 <center>
   <%= form_tag "/listings/#{@listing.id}", method: :patch do %>
     <%= label_tag :address %>
@@ -14,10 +14,10 @@
     <%= text_field_tag :zip,"#{@listing.zip}" %>
 
     <%= label_tag :description %>
-    <%= text_field_tag :description,"#{@listing.zip}" %>
+    <%= text_field_tag :description,"#{@listing.description}" %>
 
     <%= label_tag :image %>
-    <%= text_field_tag :image,"#{@listing.zip}" %>
+    <%= text_field_tag :image,"#{@listing.image}" %>
 
     <%= submit_tag 'Edit Listing' %>
   <% end %>
