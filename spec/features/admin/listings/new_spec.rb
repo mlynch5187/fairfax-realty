@@ -8,6 +8,8 @@ RSpec.describe 'Admin Listings New Page', type: :feature do
                            password: "123456",
                            role: 0)
 
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@admin)
+
       visit '/admin/dashboard'
 
       click_link "New Listing"
