@@ -5,7 +5,8 @@ class ApplicationController < ActionController::Base
                 :current_user?,
                 :current_admin?,
                 :require_admin,
-                :require_not_admin
+                :require_not_admin,
+                :logged_in?
 
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
@@ -25,5 +26,9 @@ class ApplicationController < ActionController::Base
 
   def require_not_admin
     render file: "/public/404" if current_admin?
+  end
+
+  def logged_in?
+    session[:user_id].present?
   end
 end

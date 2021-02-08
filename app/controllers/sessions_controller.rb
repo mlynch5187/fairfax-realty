@@ -1,6 +1,11 @@
 class SessionsController < ApplicationController
 
-  def new; end
+  def new
+    if logged_in?
+      flash[:error] = "I'm already logged in"
+      redirect_by_role
+    end
+  end
 
   def create
     user = User.find_by(email: params[:email])
