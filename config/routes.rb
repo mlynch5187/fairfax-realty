@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get '/', to: 'welcome#index'
   get '/listings', to:'listings#index'
   get '/listings/:listing_id', to:'listings#show'
+  post '/listings', to: 'listings#create'
 
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
@@ -9,7 +10,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     get "/dashboard", to: 'dashboard#index'
-    get "listings/new", to: 'listings#new'
-    # post "/dashboard", to: 'dashboard#index'
+    post "/dashboard", to: 'dashboard#index'
+    # get "/listings/new", to: 'listings#new'
   end
 end

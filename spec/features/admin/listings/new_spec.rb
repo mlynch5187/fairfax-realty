@@ -25,6 +25,8 @@ RSpec.describe 'Admin Listings New Page', type: :feature do
 
       new_merchant = Listing.last
 
+      require "pry"; binding.pry
+
       expect(current_path).to eq('/admin/dashboard')
       expect(page).to have_content("12345 Main Street")
       expect(new_merchant.address).to eq("12345 Main Street")
