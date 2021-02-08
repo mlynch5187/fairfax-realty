@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/listings/:listing_id', to:'listings#show'
 
   get "/login", to: "sessions#new"
-  # post "/login", to: "sessions#create"
+  post "/login", to: "sessions#create"
   # get "/logout", to: "sessions#destroy"
 
   namespace :admin do
