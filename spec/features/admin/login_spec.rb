@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe("Admin Merchants Index Page") do
+RSpec.describe("Admin Login Page") do
   describe "As an admin when I visit the admin login page " do
     before(:each) do
       @admin = User.create(email: "admin@example.com",
