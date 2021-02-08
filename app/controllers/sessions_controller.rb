@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
       flash[:success] = "Welcome, #{user.email}!"
       redirect_by_role
     else
-      flash[:error] = "Sorry, your credentials are bad."
+      flash[:error] = "Sorry, your credentials are invalid."
       render :new
     end
   end
