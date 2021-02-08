@@ -17,6 +17,6 @@ class SessionsController < ApplicationController
   private
 
   def redirect_by_role
-    redirect_to '/admin' if current_admin?
+    redirect_to '/admin/dashboard' if current_admin?
   end
 end
