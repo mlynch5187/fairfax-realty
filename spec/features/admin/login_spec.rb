@@ -35,5 +35,21 @@ RSpec.describe("Admin Merchants Index Page") do
       expect(page).to have_link("New Listing")
       expect(page).to have_link("Edit Listing")
     end
+
+    it "I can successfully logout after logging in" do
+      visit "/login"
+
+      fill_in :email, with: @admin.email
+      fill_in :password, with: @admin.password
+
+      click_button "Login"
+
+      expect(current_path).to eq("/admin/dashboard")
+
+      click_link "Logout"
+
+      expect(current_path).to eq("/")
+      expect(page).to have_content("You have logged out")
+    end
   end
 end
