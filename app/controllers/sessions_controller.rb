@@ -14,4 +14,9 @@ class SessionsController < ApplicationController
     end
   end
 
+  private
+
+  def redirect_by_role
+    redirect_to '/admin' if current_admin?
+  end
 end
