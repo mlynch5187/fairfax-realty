@@ -33,6 +33,7 @@ RSpec.describe 'Admin Listings New Page', type: :feature do
 
       new_listing = Listing.last
 
+      save_and_open_page
       expect(current_path).to eq('/admin/dashboard')
       expect(page).to have_content("12345 Main Street")
       expect(new_listing.address).to eq("12345 Main Street")

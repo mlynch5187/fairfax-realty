@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get '/listings', to:'listings#index'
   get '/listings/:listing_id', to:'listings#show'
   post '/listings', to: 'listings#create'
+  patch '/listings/:listing_id', to: 'listings#update'
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
