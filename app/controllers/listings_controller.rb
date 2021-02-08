@@ -18,6 +18,17 @@ class ListingsController < ApplicationController
     end
   end
 
+  def update
+    @listing = Listing.find(params[:listing_id])
+    @listing.update(listing_params)
+    if @listing.save
+      redirect_to "/listings/#{@listing.id}"
+    else
+      flash[:error] = @listing.errors.full_messages.to_sentence
+      render :edit
+    end
+  end
+
   private
 
   def listing_params
