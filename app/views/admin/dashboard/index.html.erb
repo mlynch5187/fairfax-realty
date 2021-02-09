@@ -9,7 +9,7 @@
   <h2> Testimonials </h2>
     <p><%=link_to "New Testimonial", "/admin/testimonials/new"%></p>
       <% @testimonials.each do |testimonial|%>
-    <p>Description<%="#{testimonial.description}"%> <%=link_to "Edit Listing", "/admin/testimonials/#{testimonial.id}/edit"%></p>
+    <p>Description<%="#{testimonial.description}"%> <%=link_to "Edit Testimonial", "/admin/testimonials/#{testimonial.id}/edit"%></p>
     <p>Author<%="#{testimonial.author}"%></p>
     <% end %>
 
