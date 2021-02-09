@@ -32,5 +32,20 @@ RSpec.describe 'Admin Testimonials Edit Page', type: :feature do
       expect(new_testimonial.description).to eq("I made a new testimonial to replace the old one")
       expect(new_testimonial.author).to eq("Jill Hartfordson")
     end
+
+    it 'I must fill out all form fields to submit' do
+
+      click_link "Edit Testimonial"
+
+      fill_in :description, with: ""
+      fill_in :author, with: ""
+
+      click_button "Edit Testimonial"
+
+      new_testimonial = Testimonial.last
+
+      expect(current_path).to eq("/admin/testimonials/#{new_testimonial.id}/edit")
+      expect(page).to have_content("Description can't be blank and Author can't be blank")
+    end
   end
 end
