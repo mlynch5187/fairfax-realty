@@ -1,5 +1,7 @@
 class TestimonialsController < ApplicationController
 
-  def index; end
+  def index
+    @testimonials = Testimonial.all
+  end
 
 end
