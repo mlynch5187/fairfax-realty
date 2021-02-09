@@ -13,4 +13,10 @@ class TestimonialsController < ApplicationController
       flash[:error] = testimonial.errors.full_messages.to_sentence
     end
   end
+
+  private
+
+  def testimonial_params
+    params.permit(:description, :author)
+  end
 end
