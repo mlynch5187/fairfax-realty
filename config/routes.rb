@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/listings/:listing_id', to:'listings#show'
   post '/listings', to: 'listings#create'
   patch '/listings/:listing_id', to: 'listings#update'
+  get '/testimonials', to: 'testimonials#index'
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
