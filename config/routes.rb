@@ -17,5 +17,6 @@ Rails.application.routes.draw do
     get '/listings/new', to: 'listings#new'
     get '/listings/:listing_id/edit', to: 'listings#edit'
     get '/testimonials/new', to: 'testimonials#new'
+    get '/testimonials/:testimonial_id/edit', to: 'testimonials#edit'
   end
 end
