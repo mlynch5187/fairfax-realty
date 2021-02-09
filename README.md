@@ -25,8 +25,6 @@ learning objective is to practice Ruby with the Rails framework along with datab
 
 [![Header](https://raw.githubusercontent.com/mlynch5187/fairfax-realty/main/app/assets/images/databases.png "Database Overview")
 
-### Dependencies Used
-
 ### Tools Used
 - Ruby on Rails (5.2.4) for the language and web framework
 - RSpec, Simplecov, Capybara and Should Matchers for testing
