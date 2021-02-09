@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post '/listings', to: 'listings#create'
   patch '/listings/:listing_id', to: 'listings#update'
   get '/testimonials', to: 'testimonials#index'
+  post '/testimonials', to: 'testimonials#create'
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
