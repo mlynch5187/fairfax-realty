@@ -9,8 +9,8 @@
   <h2> Testimonials </h2>
     <p><%=link_to "New Testimonial", "/admin/testimonials/new"%></p>
       <% @testimonials.each do |testimonial|%>
-    <p>Description<%="#{listing.description}"%> <%=link_to "Edit Listing", "/admin/testimonials/#{listing.id}/edit"%></p>
-    <p>Author<%="#{listing.author}"%></p>
+    <p>Description<%="#{testimonial.description}"%> <%=link_to "Edit Listing", "/admin/testimonials/#{testimonial.id}/edit"%></p>
+    <p>Author<%="#{testimonial.author}"%></p>
     <% end %>
 
 <%= link_to "Logout", "/logout" if current_user %>
