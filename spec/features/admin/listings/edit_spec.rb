@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Admin Listings New Page', type: :feature do
+RSpec.describe 'Admin Listings Edit Page', type: :feature do
   describe 'As a logged in admin' do
     before :each do
       @admin = User.create(email: "admin@example.com",

@@ -4,5 +4,6 @@ class Admin::DashboardController < ApplicationController
 
   def index
     @listings = Listing.all
+    @testimonials = Testimonial.all
   end
 end

@@ -1,0 +1,13 @@
+<h1 align= "center">Create New Testimonial</h1>
+<center>
+  <%= form_tag '/testimonials', method: :post do |f| %>
+
+    <%= label_tag :description %>
+    <%= text_field_tag :description %>
+
+    <%= label_tag :author %>
+    <%= text_field_tag :author %>
+
+    <%= submit_tag 'Create New Testimonial' %>
+  <% end %>
+</center>

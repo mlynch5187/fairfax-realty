@@ -1,0 +1,12 @@
+<h1>Edit Testimonial</h1>
+<center>
+  <%= form_tag "/testimonials/#{@testimonial.id}", method: :patch do %>
+    <%= label_tag :description %>
+    <%= text_field_tag :description, "#{@testimonial.description}" %>
+
+    <%= label_tag :author %>
+    <%= text_field_tag :author, "#{@testimonial.author}" %>
+
+    <%= submit_tag 'Edit Testimonial' %>
+  <% end %>
+</center>

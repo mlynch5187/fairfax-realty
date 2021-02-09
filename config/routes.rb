@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   get '/listings/:listing_id', to:'listings#show'
   post '/listings', to: 'listings#create'
   patch '/listings/:listing_id', to: 'listings#update'
+  get '/testimonials', to: 'testimonials#index'
+  post '/testimonials', to: 'testimonials#create'
+  patch '/testimonials/:testimonial_id', to: 'testimonials#update'
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
@@ -14,5 +17,7 @@ Rails.application.routes.draw do
     post '/dashboard', to: 'dashboard#index'
     get '/listings/new', to: 'listings#new'
     get '/listings/:listing_id/edit', to: 'listings#edit'
+    get '/testimonials/new', to: 'testimonials#new'
+    get '/testimonials/:testimonial_id/edit', to: 'testimonials#edit'
   end
 end
