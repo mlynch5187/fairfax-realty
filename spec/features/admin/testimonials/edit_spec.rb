@@ -30,7 +30,7 @@ RSpec.describe 'Admin Testimonials Edit Page', type: :feature do
       expect(current_path).to eq('/admin/dashboard')
       expect(page).to have_content("I made a new testimonial to replace the old one")
       expect(new_testimonial.description).to eq("I made a new testimonial to replace the old one")
-      expect(new_testimonial.city).to eq("Jill Hartfordson")
+      expect(new_testimonial.author).to eq("Jill Hartfordson")
     end
   end
 end
