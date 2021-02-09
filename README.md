@@ -28,7 +28,9 @@ learning objective is to practice Ruby with the Rails framework along with datab
 ### Dependencies Used
 
 ### Tools Used
-- Ruby on Rails
-- RSpec for testing
+- Ruby on Rails (5.2.4) for the language and web framework
+- RSpec, Simplecov, Capybara and Should Matchers for testing
 - Postgresql as a database
-- Bootstrap for front end styling
+- Bootstrap, HTML, and CSS for front end styling
+- Pry for debugging
+- Bcrypt for user authentication
