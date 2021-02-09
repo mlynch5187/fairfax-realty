@@ -25,7 +25,7 @@ RSpec.describe 'Admin Testimonials New Page', type: :feature do
 
       expect(current_path).to eq('/admin/dashboard')
       expect(page).to have_content("I had a great experience! I found the home I was looking for at a reasonable price")
-      expect(new_listing.address).to eq("Amanda Reynolds")
+      expect(new_testimonial.author).to eq("Amanda Reynolds")
     end
   end
 end
