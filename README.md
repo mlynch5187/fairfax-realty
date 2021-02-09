@@ -1,5 +1,9 @@
 ## Fairfax Realty App
 
+### What Is It?
+This application is a platform for a realtor to showcase and market themselves. On this app a user can find contact information,
+easily book consultations, and view the realtor's testimonials and current and former listings.
+
 ### Objectives
 
 - The application should have a section displaying current and sold listings
@@ -13,17 +17,18 @@ One learning objective is to refresh my memory when it comes to adding a booking
 so I may use that tool again, or I may be steered towards another tool like YouCanBookMe after doing a bit of research. Another
 learning objective is to practice Ruby with the Rails framework along with database management.
 
-### What Is It?
-This application is a platform for a realtor to showcase and market themselves. On this app a user can find contact information,
-easily book consultations, and view the realtor's current and former listings.
-
 ### Original Wireframe
 
 [![Header](https://raw.githubusercontent.com/mlynch5187/fairfax-realty/main/app/assets/images/original_wireframe.png "Original Wireframe")
 
+### Database Overview
+
+[![Header](https://raw.githubusercontent.com/mlynch5187/fairfax-realty/main/app/assets/images/databases.png "Database Overview")
+
 ### Dependencies Used
 
 ### Tools Used
-- Ruby, Rails
+- Ruby on Rails
 - RSpec for testing
-- Travis CI for continuous integration
+- Postgresql as a database
+- Bootstrap for front end styling
