@@ -40,7 +40,7 @@ RSpec.describe 'Admin Testimonials New Page', type: :feature do
       new_testimonial = Testimonial.last
 
       expect(current_path).to eq('/admin/testimonials/new')
-      expect(page).to have_content("description can't be blank")
+      expect(page).to have_content("Description can't be blank")
     end
   end
 end
