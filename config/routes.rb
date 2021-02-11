@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
+  get 'consultations', to: 'consultations#index'
 
   namespace :admin do
     get '/dashboard', to: 'dashboard#index'
