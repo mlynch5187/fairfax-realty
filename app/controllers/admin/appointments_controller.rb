@@ -1,5 +1,6 @@
 class Admin::AppointmentsController < ApplicationController
 
-  def index; end
-
+  def index
+    @appointments = Appointment.all
+  end
 end

@@ -1,0 +1,5 @@
+<h1>My Appointments</h1>
+
+  <% @appointments.each do |appointment|%>
+    <p><%="Appointment with #{appointment.email} on #{appointment.date} at #{appointment.time}"%> <%=link_to "Edit Appointment", "/admin/appointments/#{appointment.id}/edit"%></p>
+  <% end %>
