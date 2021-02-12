@@ -14,8 +14,6 @@ RSpec.describe 'Admin Listings New Page', type: :feature do
 
     it 'I can create a new listing' do
 
-      require "pry"; binding.pry
-
       click_link "New Listing"
 
       fill_in :address, with: "12345 Main Street"

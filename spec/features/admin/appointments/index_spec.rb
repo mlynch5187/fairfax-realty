@@ -8,7 +8,7 @@ RSpec.describe 'Admin Appointments Index Page', type: :feature do
                            role: 0)
 
       @appointment_1 = @admin.appointments.create(email: 'interestedclient@mail.com',
-                                          time: '6:00')
+                                                  time: '6:00')
 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@admin)
 
