@@ -4,14 +4,13 @@
     <title>FairfaxRealty</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-mainbg">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-mainbg">
         <a class="navbar-brand navbar-logo" href="/">Lucie Lynch Realty</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars text-white"></i>
@@ -44,7 +43,7 @@
 
     <% flash.each do |type, message| %>
       <p><%= message %></p>
-    <% end %>
+      <% end %>
     <%= yield %>
 
   <footer class="fixed-bottom">
