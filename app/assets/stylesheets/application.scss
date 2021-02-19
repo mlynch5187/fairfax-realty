@@ -47,6 +47,10 @@ footer {
   padding: 1rem 0;
   background-color: #5161ce;
 	padding-bottom: 2rem;
+    position: fixed;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
 }
 
 .footer-column:not(:first-child) {
