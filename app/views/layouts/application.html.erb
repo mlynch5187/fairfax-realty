@@ -40,15 +40,15 @@
             </ul>
         </div>
     </nav>
+  </body>
 
     <% flash.each do |type, message| %>
       <p><%= message %></p>
     <% end %>
     <%= yield %>
-  </body>
-  <div class="footer fixed-bottom">
-  <footer>
-    <!-- <div class="text-center"><i class="fas fa-ellipsis-h"></i></div> -->
+
+  <footer class="fixed-bottom">
+    <div class="text-center"><i class="fas fa-ellipsis-h"></i></div>
     <div class="row text-center">
       <div class="col-md-4 box">
         <a class="copyright quick-links" href="https://github.com/mlynch5187">Copyright &copy; Michael Alex Lynch <script>document.write(new Date().getFullYear())</script>
@@ -61,11 +61,6 @@
             <span class="iconify" data-icon="logos:twitter" data-inline="false"></span>
           </a>
           </li>
-          <!-- <li class="list-inline-item">
-            <a href="#">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          </li> -->
           <li class="list-inline-item">
             <a href="https://www.linkedin.com/in/lucie-lynch-b730b018">
             <span class="iconify" data-icon="logos:linkedin-icon" data-inline="false"></span>
@@ -83,7 +78,6 @@
           </li>
         </ul>
       </div>
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 </html>
