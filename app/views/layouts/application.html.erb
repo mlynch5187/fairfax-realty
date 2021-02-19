@@ -30,20 +30,15 @@
                 <li class="nav-item">
                   <a class="nav-link" href="/consultations"><i class="far fa-consultation"></i>Book A Free Consultation</a>
                 </li>
-                <!-- <div class="navbar-nav ml-auto" id="nav-tab" role="tablist">
-                  <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
-                  <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
-                  <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
-                  <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
-                </div> -->
             </ul>
         </div>
-    </nav>
-  </body>
+      </nav>
+    </body>
 
     <% flash.each do |type, message| %>
       <p><%= message %></p>
-      <% end %>
+    <% end %>
+
     <%= yield %>
 
   <footer class="fixed-bottom">
